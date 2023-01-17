@@ -1,1 +1,83 @@
 # praktikum11
+
+## Exception Handling
+- Exception (eksepsi) merupakan suatu kesalahan (error) yang terjadi saat proses eksekusi program saat sedang berjalan
+- kesalahan ini akan menyebabkan program berakhir dengan tidak normal.
+
+## Handing
+- penanganan file adalah bagian penting dari aplikasi apapun.
+
+## Assertion
+Assertion(pernyataan) adalah kewajaran program yang kamu bisa aktifkan/nonaktifkan ketika kamu selesai menjalankan program
+
+### The assert statement
+- saat menemukan pernyataan, python mengevaluasi ekspresi yang menyertainya, yang mana semoga benar. jika ekspresi salah,python memunculkan pengecualian AssertionError.
+
+#### Sintaks untuk pernyataan yaitu :
+
+assert Expression[, argumen]
+
+Jika pernyataan gagal, Python menggunakan ArgumentExpression. ArgumentExpression sebagai argumen-argumen untuk AssertionError. 
+Pengecualian AssertionError dapat ditangkap dan ditangani seperti pengecualian lainnya menggunakan try kecuali pernyataan, tetapi jika dibiarkan mereka akan menghentikan program dan menghasilkan backtrace.
+
+#### Contoh :
+- Berikut adalah fungsi fungsi yang mengubah suhu dari derajat Kelvin menjadi derajat Fahrenheit.Karena nol derajat Kelvin dingin, fungsi fungsi menyimpannya jika melihat negatif negatif suhu.
+- ketikan kode dibawah dijalankan, menghasilkan hasil sebagai berikut :
+![img](picture/pic1.png)
+
+## Mengenai Pengecualian
+Jika Anda memiliki beberapa kode mencurigakan yang mungkin mengeluarkan pengecualian, Anda dapat mempertahankan program Anda letakkan kode yang mencurigakan di *try: blok. Setelah coba: blok, sertakan pernyataan sertakan *except: statement, diikuti oleh blok kode yang menangani masalah seanggun mungkin.
+
+#### Contoh :
+-Contoh-contoh ini membuka file, menulis konten file, dan keluar dengan aman karena ada tidak masalah
+- Ketika kode di bawah dijalankan, menghasilkan hasil sebagai berikut:
+![img](picture/pic2.png)
+
+- Contoh ini mencoba membuka file yang Anda tidak memiliki izin menulis, sehingga membuat file pengecualian
+- Ketika kode di bawah dijalankan, menghasilkan hasil sebagai berikut:
+![img](picture/pic3.png)
+
+## Fasal kecuali tanpa Pengecualian
+- Anda juga dapat menggunakan pernyataan exception tanpa exception yang didefinisikan sebagai berikut:
+
+try: You do your operations here; ...................... except: If there is any exception, 
+then execute this block. ...................... else: If there is no exception then execute this block.
+
+Pernyataan coba-kecuali jenis ini menangkap semua pengecualian pengecualian yang terjadi. Menggunakan percobaan seperti try-expect pernyataan tidak dianggap sebagai praktik pemrograman yang baik, karena mereka menangkap semuanya pengecualian tetapi tidak membuat programmer mengidentifikasi kemungkinan penyebab masalah terjadi
+
+## Klausa kecuali dengan Berbagai Pengecualian
+- Anda juga dapat menggunakan pernyataan exception yang sama untuk menangani beberapa exception sebagai berikut:
+
+try: You do your operations here; ...................... except(Exception1[, Exception2[,...ExceptionN]]]): If there is any exception from the given exception list, then execute this block. ...................... else: If there is no exception then execute this block.
+
+### Klausa coba-akhirnya 
+#### Contoh :
+- Jika Anda tidak memiliki izin untuk membuka file dalam mode tulis yang dapat ditulis, maka ini akan menghasilkan hasil berikut:
+![img](picture/pic4.png)
+
+- contoh yang sama dapat ditulis lebih bersih sebagai berikut
+![img](picture/pic5.png)
+
+- Ketika exception dilempar ke dalam blok try, eksekusi segera dilanjutkan ke akhir memblok. Setelah semua pernyataan di blok akhirnya dieksekusi, pengecualian dimunculkan lagi dan ditangani dalam pernyataan kecuali jika ada di lapisan berikutnya yang lebih tinggi dari percobaan-kecuali penyataan.
+
+### Argumen Pengecualian 
+#### Contoh :
+- Berikut adalah contoh untuk satu pengecualian
+- Ketika kode di bawah dijalankan, menghasilkan hasil sebagai berikut:
+
+![img](picture/pic6.png)
+
+### Melempar Pengecualian 
+#### Contoh :
+- Pengecualian dapat berupa string, kelas, atau objek. Sebagian besar pengecualian adalah pengecualian dari inti Python menimbulkan adalah kelas dengan argumen=argumen yang merupakan turunan dari kelas. Mendefinisikan pengecualian baru cukup mudah dan dapat dilakukan sebagai berikut:
+
+![img](picture/pic7.png)
+
+### Pengecualian yang ditetapkan pengguna
+- Python juga memungkinkan Anda membuat pengecualian sendiri dengan menurunkan kelas-kelas dari yang standar pengecualian bawaan.
+- Berikut adalah contoh-contoh yang terkait dengan RuntimeError. Di sini, kelas dibuat yang merupakan subkelas dari subkelas RuntimeError. Ini berguna saat anda perlu menampilkan tampilan informasi yang lebih spesifik saat e pengecualian tertangkap.
+- Di blok try, pengecualian yang ditentukan pengguna dimunculkan dan ditangkap di blok except. Itu variabel e digunakan untuk membuat instance dari kelas Networkerror.
+
+![img](picture/pic8.png)
+
+## Sekian, Terima kasih
